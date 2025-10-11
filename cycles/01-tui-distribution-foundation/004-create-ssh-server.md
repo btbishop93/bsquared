@@ -85,12 +85,14 @@ import { createTUI } from "@bsquared/tui";
 const PORT = parseInt(process.env.SSH_PORT || "2222", 10);
 const HOST = process.env.SSH_HOST || "0.0.0.0";
 
-// SSH host key (in production, load from secure storage)
-// For development, this is a dummy key
-const HOST_KEY = `-----BEGIN OPENSSH PRIVATE KEY-----
-b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-QyNTUxOQAAACBXvJbFr3vN4f9/IhE1YqJ0w9tMDDhL7FmUXqTqWqDQ0QAAAJh9Uihtflw
------END OPENSSH PRIVATE KEY-----`;
+// SSH host key - load from environment variable
+// Generate a key with: ssh-keygen -t ed25519 -f ssh_host_key -N ""
+// Then add to .env: SSH_HOST_KEY="$(cat ssh_host_key)"
+const HOST_KEY = process.env.SSH_HOST_KEY || "";
+
+if (!HOST_KEY) {
+  throw new Error("SSH_HOST_KEY environment variable is required");
+}
 
 console.log(`Starting SSH server on ${HOST}:${PORT}...`);
 
@@ -348,4 +350,3 @@ Connect with: ssh -p 2222 user@localhost
 ## Next Steps
 
 The next task will set up the Next.js web application structure, which will also use the shared TUI package.
-

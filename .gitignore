@@ -50,6 +50,7 @@ Thumbs.db
 tmp/
 temp/
 *.log
+*.pem
 
 # Package manager lockfiles (keep only one based on your choice)
 # Using bun, so keep bun.lockb and ignore others
