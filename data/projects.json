@@ -1,39 +1,131 @@
 {
   "projects": [
     {
-      "title": "Nevernote",
+      "title": "Riffolio",
+      "href": "https://riffolio.com",
+      "dates": "2025 - Now",
+      "status": "development",
+      "description": "Collaborative idea scoring and prioritization using a structured 10-factor framework. Combines blind peer ratings with AI scoring to surface what's worth building. **Waitlist live!**",
+      "technologies": [
+        "TypeScript",
+        "TailwindCSS",
+        "Next.js",
+        "Convex",
+        "BetterAuth",
+        "AI SDK",
+        "OpenRouter",
+        "Vercel"
+      ],
+      "image": "/projects/riffolio.png",
+      "links": [
+        {
+          "type": "Website",
+          "href": "https://riffolio.com"
+        }
+      ]
+    },
+    {
+      "title": "Braver Search",
+      "href": "https://apps.apple.com/us/app/braver-search/id6740840706",
+      "dates": "2025 - Now",
+      "status": "live",
+      "description": "Safari plugin for iOS/Mac that makes Brave Search the default browser. **18,500+ daily active users**.",
+      "technologies": ["Swift", "JavaScript", "Safari Extensions"],
+      "image": "/projects/braver.png",
+      "links": [
+        {
+          "type": "App Store",
+          "href": "https://apps.apple.com/us/app/braver-search/id6740840706"
+        },
+        {
+          "type": "GitHub",
+          "href": "https://github.com/btbishop93/braver-search"
+        }
+      ]
+    },
+    {
+      "title": "Jumblebook Notes",
+      "href": "https://apps.apple.com/us/app/jumblebook-notes/id6741652060",
+      "dates": "2022 - Now",
+      "status": "live",
+      "description": "Encrypted note-taking app built with Flutter and Dart, deployed to iOS and Android.",
+      "technologies": ["Dart", "Flutter", "Firebase"],
+      "image": "/projects/jumblebook.png",
+      "links": [
+        {
+          "type": "App Store",
+          "href": "https://apps.apple.com/us/app/jumblebook-notes/id6741652060"
+        },
+        {
+          "type": "GitHub",
+          "href": "https://github.com/btbishop93/jumblebook"
+        }
+      ]
+    },
+    {
+      "title": "App Preview Converter",
+      "href": "https://app-preview-converter.vercel.app",
+      "dates": "2024 - Now",
+      "status": "live",
+      "description": "Web app using ffmpeg to convert .mp4 videos for Apple App Store compliance.",
+      "technologies": [
+        "TypeScript",
+        "TailwindCSS",
+        "Next.js",
+        "ffmpeg",
+        "Vercel"
+      ],
+      "image": "/projects/app-preview.png",
+      "links": [
+        {
+          "type": "Website",
+          "href": "https://app-preview-converter.vercel.app"
+        },
+        {
+          "type": "GitHub",
+          "href": "https://github.com/btbishop93/app-preview-converter"
+        }
+      ]
+    },
+    {
+      "title": "Poolside",
       "href": "#",
-      "dates": "2024",
-      "description": "AI tool that turns meetings into structured docs using summarization pipelines. **OpenAI Hackathon finalist**.",
-      "technologies": ["OpenAI", "TypeScript", "Next.js", "PostgreSQL"],
-      "image": "/projects/nevernote.png",
+      "dates": "2025 - Now",
+      "status": "development",
+      "description": "A Real-time NFL pick'em pool tracker with live scoring, AI predictions, and multi-league support.",
+      "technologies": [
+        "TypeScript",
+        "TailwindCSS",
+        "Next.js",
+        "Convex",
+        "Vercel"
+      ],
+      "image": "/projects/poolside.png",
+      "links": [
+        {
+          "type": "GitHub",
+          "href": "https://github.com/btbishop93/poolside"
+        }
+      ]
+    },
+    {
+      "title": "GitGood",
+      "href": "#",
+      "dates": "Need a cracked out hackathon weekend!",
+      "status": "concept",
+      "description": "Thinking about a fun way to gamify git for developers.",
+      "technologies": [],
+      "image": "/projects/gitgood.png",
       "links": []
     },
     {
-      "title": "Forwheel",
-      "href": "https://forwheel.com",
-      "dates": "2021 - Present",
-      "description": "Platform serving **150+ food trucks** with AI vendor advisor Garnish powered by OpenAI + RAG.",
-      "technologies": ["React", "Node.js", "OpenAI", "RAG", "PostgreSQL"],
-      "image": "/projects/forwheel.png",
-      "links": [{ "type": "Website", "href": "https://forwheel.com" }]
-    },
-    {
-      "title": "Garnish AI",
+      "title": "Puddin'",
       "href": "#",
-      "dates": "2023 - Present",
-      "description": "Intelligent vendor advisor for food trucks using retrieval-augmented generation for contextual recommendations.",
-      "technologies": ["LangChain", "OpenAI", "Pinecone", "Python"],
-      "image": "/projects/garnish.png",
-      "links": []
-    },
-    {
-      "title": "Rbitrage Trading",
-      "href": "#",
-      "dates": "2017 - 2020",
-      "description": "Crypto trading algorithms that grew to **$750K AUM** through quantitative strategies and automated systems.",
-      "technologies": ["Python", "TensorFlow", "PostgreSQL", "AWS"],
-      "image": "/projects/rbitrage.png",
+      "dates": "When I want to learn React Native :)",
+      "status": "concept",
+      "description": "Toying with a new concept for a accountability app. **Proof is in the puddin'.**",
+      "technologies": [],
+      "image": "/projects/puddin.png",
       "links": []
     }
   ]

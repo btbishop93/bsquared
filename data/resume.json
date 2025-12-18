@@ -2,40 +2,40 @@
   "work": [
     {
       "company": "Morgan Stanley",
-      "title": "Engineering Lead",
+      "title": "Vice President",
       "logoUrl": "/logos/morgan-stanley.svg",
-      "start": "2020",
-      "end": "Present",
-      "description": "Lead 5 greenfield client-facing planning apps across E*TRADE and MS platforms, managing 12 engineers across 3 global squads. Earned the Tesla Award for Innovation. Launched internal AI bootcamp teaching LLMs, Copilot, and AI-assisted workflows.",
-      "href": "https://www.morganstanley.com"
+      "start": "2015",
+      "end": "Now",
+      "description": "Started as Technical Business Analyst, grew into Front-End Engineer (Tesla Award for Innovation), now VP managing 12 engineers across 2 global squads. Led zero-to-one UI development for financial planning apps. Currently lead engineering strategy for 5 client-facing apps across Morgan Stanley Online & E*TRADE. Pitched and launched a unified planning platform saving $2M+. Now leading firm-wide AI developer enablement & education via bootcamps and workshops. OpenAI Hackathon finalist with 'Nevernote' (Whisper, Langchain, GPT).",
+      "href": "https://www.morganstanley.com/wealth-general/digital-solutions"
     },
     {
       "company": "Forwheel",
-      "title": "Founder",
+      "title": "Founder & CEO",
       "logoUrl": "/logos/forwheel.svg",
       "start": "2021",
-      "end": "Present",
-      "description": "Built a platform serving 150+ food trucks, powered by AI vendor advisor Garnish using OpenAI + RAG for intelligent recommendations and insights.",
-      "href": "https://forwheel.com"
+      "end": "Now",
+      "description": "Founded and built a B2B food truck platform end-to-end using Flutter, Dart, GraphQL, Firebase, and GCP. Developed AI advisor 'Garnish' with OpenAI's Responses API and RAG for intelligent vendor recommendations. Led remote cross-functional team of 5. Secured contracts with 3 industry vendors for discounted goods/services. Currently serving 150+ food trucks across the US.",
+      "href": "https://forwheel.app"
     },
     {
       "company": "Rbitrage Capital",
-      "title": "Co-Founder",
+      "title": "Founder & CTO",
       "logoUrl": "/logos/rbitrage.svg",
       "start": "2017",
-      "end": "2020",
-      "description": "Built and scaled crypto trading algorithms, growing AUM to $750K. Developed quantitative strategies and automated trading systems.",
+      "end": "2019",
+      "description": "Led technical strategy for algorithmic crypto trading platform using Java, React, and AWS. Grew AUM to $750K in 18 months through automated arbitrage trading.",
       "href": "#"
     }
   ],
   "education": [
     {
-      "school": "University",
-      "degree": "Bachelor of Science in Computer Science",
-      "logoUrl": "/logos/university.svg",
-      "start": "2010",
-      "end": "2014",
-      "href": "#"
+      "school": "Marist College",
+      "degree": "Bachelor's in Computer Science",
+      "logoUrl": "/logos/marist.svg",
+      "start": "2011",
+      "end": "2015",
+      "href": "https://www.marist.edu"
     }
   ]
 }

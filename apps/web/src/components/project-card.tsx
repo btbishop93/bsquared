@@ -11,11 +11,34 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
+type ProjectStatus = "live" | "development" | "concept";
+
+const STATUS_CONFIG: Record<
+  ProjectStatus,
+  { label: string; className: string }
+> = {
+  live: {
+    label: "Live",
+    className:
+      "bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20",
+  },
+  development: {
+    label: "In Development",
+    className:
+      "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20",
+  },
+  concept: {
+    label: "Concept",
+    className: "bg-muted text-muted-foreground",
+  },
+};
+
 interface ProjectCardProps {
   title: string;
   href?: string;
   description: string;
   dates: string;
+  status?: ProjectStatus;
   tags: readonly string[];
   link?: string;
   image?: string;
@@ -33,6 +56,7 @@ export function ProjectCard({
   href,
   description,
   dates,
+  status,
   tags,
   link,
   image,
@@ -40,6 +64,8 @@ export function ProjectCard({
   links,
   className,
 }: ProjectCardProps) {
+  const statusConfig = status ? STATUS_CONFIG[status] : null;
+
   return (
     <Card className="flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full">
       <Link
@@ -68,7 +94,20 @@ export function ProjectCard({
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">
-          <CardTitle className="mt-1 text-base">{title}</CardTitle>
+          <div className="flex items-center justify-between gap-2">
+            <CardTitle className="mt-1 text-base">{title}</CardTitle>
+            {statusConfig && (
+              <Badge
+                variant="outline"
+                className={cn(
+                  "text-[10px] px-1.5 py-0",
+                  statusConfig.className
+                )}
+              >
+                {statusConfig.label}
+              </Badge>
+            )}
+          </div>
           <time className="font-sans text-xs">{dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}

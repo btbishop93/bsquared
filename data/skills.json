@@ -2,39 +2,48 @@
   "categories": [
     {
       "name": "Languages",
-      "skills": ["TypeScript", "JavaScript", "Python", "Go", "Rust", "SQL"]
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "Dart",
+        "Python",
+        "PostgreSQL",
+        "GraphQL"
+      ]
     },
     {
-      "name": "Frontend",
-      "skills": ["React", "Next.js", "Vue", "Tailwind CSS", "Framer Motion"]
+      "name": "Libraries & Frameworks",
+      "skills": ["Flutter", "React", "Next.js", "Tailwind CSS", "AI SDK 5"]
     },
     {
-      "name": "Backend",
-      "skills": ["Node.js", "Express", "FastAPI", "GraphQL", "REST APIs"]
+      "name": "AI & Agents",
+      "skills": ["OpenAI", "Agents", "MCPs", "RAG", "LangChain"]
     },
     {
-      "name": "AI/ML",
-      "skills": ["OpenAI", "LangChain", "RAG", "Vector DBs", "Embeddings"]
+      "name": "Platforms & Tooling",
+      "skills": [
+        "GCP",
+        "Vercel",
+        "Convex",
+        "OpenRouter",
+        "Postgres",
+        "Docker",
+        "PostHog"
+      ]
     },
     {
-      "name": "Infrastructure",
-      "skills": ["AWS", "Vercel", "Docker", "Kubernetes", "PostgreSQL", "Redis"]
-    },
-    {
-      "name": "Tools",
-      "skills": ["Git", "GitHub Actions", "Terraform", "Datadog", "Supabase"]
+      "name": "Dev Tools",
+      "skills": ["Claude Code", "Cursor", "Git"]
     }
   ],
   "featured": [
     "TypeScript",
     "React",
     "Next.js",
-    "Node.js",
+    "Flutter",
     "Python",
     "OpenAI",
-    "PostgreSQL",
-    "AWS",
-    "Docker",
-    "Tailwind CSS"
+    "Tailwind CSS",
+    "Vercel"
   ]
 }

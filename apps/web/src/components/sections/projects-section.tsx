@@ -7,11 +7,14 @@ export interface ProjectLinkItem {
   href: string;
 }
 
+export type ProjectStatus = "live" | "development" | "concept";
+
 export interface ProjectItem {
   title: string;
   href?: string;
   description: string;
   dates: string;
+  status: ProjectStatus;
   technologies: readonly string[];
   image?: string;
   links?: readonly ProjectLinkItem[];
@@ -26,9 +29,15 @@ export function ProjectsSection({
   projects,
   blurFadeDelay,
 }: ProjectsSectionProps) {
+  const mainProjects = projects.filter(
+    (p) => p.status === "live" || p.status === "development"
+  );
+  const conceptProjects = projects.filter((p) => p.status === "concept");
+
   return (
     <section id="projects">
       <div className="space-y-12 w-full py-12">
+        {/* Main Projects Section */}
         <BlurFade delay={blurFadeDelay * 11}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -39,14 +48,14 @@ export function ProjectsSection({
                 Check out my latest work
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I&apos;ve worked on a variety of projects, from AI-powered tools
-                to trading algorithms. Here are a few of my favorites.
+                I&apos;ve worked on a variety of projects, from LLM Agents to
+                mobile apps & extensions. Here are a few of my favorites.
               </p>
             </div>
           </div>
         </BlurFade>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-          {projects.map((project, id) => (
+          {mainProjects.map((project, id) => (
             <BlurFade
               key={project.title}
               delay={blurFadeDelay * 12 + id * 0.05}
@@ -56,6 +65,7 @@ export function ProjectsSection({
                 title={project.title}
                 description={project.description}
                 dates={project.dates}
+                status={project.status}
                 tags={project.technologies}
                 image={project.image}
                 links={project.links?.map((link) => ({
@@ -67,6 +77,49 @@ export function ProjectsSection({
             </BlurFade>
           ))}
         </div>
+
+        {/* Concepts Section */}
+        {conceptProjects.length > 0 && (
+          <>
+            <BlurFade delay={blurFadeDelay * 14}>
+              <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                <div className="space-y-2">
+                  <div className="inline-block rounded-md bg-muted text-muted-foreground px-3 py-1 text-sm">
+                    Ideas & Concepts
+                  </div>
+                  <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                    Things I&apos;m tinkering on
+                  </h2>
+                  <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
+                    Early-stage ideas I&apos;m passionate about exploring.
+                  </p>
+                </div>
+              </div>
+            </BlurFade>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+              {conceptProjects.map((project, id) => (
+                <BlurFade
+                  key={project.title}
+                  delay={blurFadeDelay * 15 + id * 0.05}
+                >
+                  <ProjectCard
+                    href={project.href}
+                    title={project.title}
+                    description={project.description}
+                    dates={project.dates}
+                    tags={project.technologies}
+                    image={project.image}
+                    links={project.links?.map((link) => ({
+                      icon: <Globe className="size-3" />,
+                      type: link.type,
+                      href: link.href,
+                    }))}
+                  />
+                </BlurFade>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );
