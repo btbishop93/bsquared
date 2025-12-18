@@ -2,22 +2,11 @@
   "categories": [
     {
       "name": "Languages",
-      "skills": [
-        "JavaScript",
-        "TypeScript",
-        "Dart",
-        "Python",
-        "PostgreSQL",
-        "GraphQL"
-      ]
+      "skills": ["JavaScript", "TypeScript", "Dart", "Python", "GraphQL"]
     },
     {
       "name": "Libraries & Frameworks",
-      "skills": ["Flutter", "React", "Next.js", "Tailwind CSS", "AI SDK 5"]
-    },
-    {
-      "name": "AI & Agents",
-      "skills": ["OpenAI", "Agents", "MCPs", "RAG", "LangChain"]
+      "skills": ["React", "Next.js", "Tailwind CSS", "Flutter", "AI SDK"]
     },
     {
       "name": "Platforms & Tooling",
@@ -25,25 +14,12 @@
         "GCP",
         "Vercel",
         "Convex",
-        "OpenRouter",
         "Postgres",
         "Docker",
-        "PostHog"
+        "PostHog",
+        "OpenAI",
+        "OpenRouter"
       ]
-    },
-    {
-      "name": "Dev Tools",
-      "skills": ["Claude Code", "Cursor", "Git"]
     }
-  ],
-  "featured": [
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Flutter",
-    "Python",
-    "OpenAI",
-    "Tailwind CSS",
-    "Vercel"
   ]
 }

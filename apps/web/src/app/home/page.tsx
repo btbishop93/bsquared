@@ -34,7 +34,7 @@ export default function HomePage() {
         blurFadeDelay={BLUR_FADE_DELAY}
       />
       <SkillsSection
-        featured={skillsData.featured}
+        categories={skillsData.categories}
         blurFadeDelay={BLUR_FADE_DELAY}
       />
       <ProjectsSection projects={projects} blurFadeDelay={BLUR_FADE_DELAY} />

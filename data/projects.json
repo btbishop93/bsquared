@@ -44,9 +44,24 @@
       ]
     },
     {
+      "title": "Cycles MCP",
+      "href": "https://www.npmjs.com/package/cycles-mcp?activeTab=readme",
+      "dates": "2025 - Now",
+      "status": "live",
+      "description": "AI project management tool that turns product requirements into right-sized dev tasks based on your schedule, then handles git automation.",
+      "technologies": ["TypeScript", "MCP", "Bun"],
+      "image": "/projects/cycles-mcp.png",
+      "links": [
+        {
+          "type": "NPM",
+          "href": "https://www.npmjs.com/package/cycles-mcp?activeTab=readme"
+        }
+      ]
+    },
+    {
       "title": "Jumblebook Notes",
       "href": "https://apps.apple.com/us/app/jumblebook-notes/id6741652060",
-      "dates": "2022 - Now",
+      "dates": "2020 - Now",
       "status": "live",
       "description": "Encrypted note-taking app built with Flutter and Dart, deployed to iOS and Android.",
       "technologies": ["Dart", "Flutter", "Firebase"],
@@ -90,7 +105,7 @@
     {
       "title": "Poolside",
       "href": "#",
-      "dates": "2025 - Now",
+      "dates": "2024 - Now",
       "status": "development",
       "description": "A Real-time NFL pick'em pool tracker with live scoring, AI predictions, and multi-league support.",
       "technologies": [
