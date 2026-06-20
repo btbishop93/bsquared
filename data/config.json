@@ -18,10 +18,6 @@
       "description": "If you're not in the work, you lose touch with how it's done, especially now."
     },
     {
-      "title": "Microservices are overengineered and work against agents.",
-      "description": "They fragment context and turn systems into something agents can't reason about effectively."
-    },
-    {
       "title": "Every org needs garbage collection.",
       "description": "Organizations naturally accumulate process. Without pressure to remove it, it just compounds."
     },
