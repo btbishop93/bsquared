@@ -1,7 +1,14 @@
 import { notFound } from "next/navigation";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { cache, Suspense } from "react";
-import { Tweet } from "react-tweet";
+import { EmbeddedTweet } from "react-tweet";
+import { getTweet } from "react-tweet/api";
+import type {
+  QuotedTweet,
+  Tweet as TweetData,
+  TweetBase,
+  TweetEntities,
+} from "react-tweet/api";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
@@ -11,11 +18,80 @@ import { XTwitterIcon } from "@/components/icons";
 // Force static generation to avoid hydration issues
 export const dynamic = "force-static";
 
-// Wrapper to handle Tweet with Suspense
+const TWEET_FETCH_TIMEOUT_MS = 5000;
+const X_STATUS_URL = "https://x.com/i/status/";
+
+function normalizeTweetEntities(
+  entities: Partial<TweetEntities> | undefined
+): TweetEntities {
+  return {
+    hashtags: entities?.hashtags ?? [],
+    urls: entities?.urls ?? [],
+    user_mentions: entities?.user_mentions ?? [],
+    symbols: entities?.symbols ?? [],
+    media: entities?.media,
+  };
+}
+
+function normalizeTweetBase<T extends TweetBase>(tweet: T): T {
+  return {
+    ...tweet,
+    entities: normalizeTweetEntities(tweet.entities),
+  };
+}
+
+function normalizeQuotedTweet(tweet: QuotedTweet): QuotedTweet {
+  return normalizeTweetBase(tweet);
+}
+
+function normalizeTweet(tweet: TweetData): TweetData {
+  return {
+    ...normalizeTweetBase(tweet),
+    parent: tweet.parent ? normalizeTweetBase(tweet.parent) : undefined,
+    quoted_tweet: tweet.quoted_tweet
+      ? normalizeQuotedTweet(tweet.quoted_tweet)
+      : undefined,
+  };
+}
+
+function TweetEmbedFallback({ id }: { id: string }) {
+  return (
+    <a
+      href={`${X_STATUS_URL}${id}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="not-prose my-6 block rounded-lg border bg-muted/30 p-4 text-sm text-muted-foreground no-underline transition-colors hover:text-foreground"
+    >
+      View post on X
+    </a>
+  );
+}
+
+async function TweetEmbedContent({ id }: { id: string }) {
+  try {
+    const tweet = await getTweet(id, {
+      cache: "force-cache",
+      signal: AbortSignal.timeout(TWEET_FETCH_TIMEOUT_MS),
+    });
+
+    if (!tweet) {
+      return <TweetEmbedFallback id={id} />;
+    }
+
+    return <EmbeddedTweet tweet={normalizeTweet(tweet)} />;
+  } catch {
+    return <TweetEmbedFallback id={id} />;
+  }
+}
+
 function TweetEmbed({ id }: { id: string }) {
   return (
-    <Suspense fallback={<div className="h-[400px] bg-muted/50 rounded-xl animate-pulse" />}>
-      <Tweet id={id} />
+    <Suspense
+      fallback={
+        <div className="my-6 h-[400px] animate-pulse rounded-xl bg-muted/50" />
+      }
+    >
+      <TweetEmbedContent id={id} />
     </Suspense>
   );
 }
@@ -118,4 +194,3 @@ export default async function WritingArticlePage({
     </article>
   );
 }
-
