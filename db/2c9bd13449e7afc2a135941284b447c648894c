@@ -1,0 +1,19 @@
+apps/web/src/app/writing/[slug]/page.tsx
+  s_963b4ecdc9daa5::t_4c22b8baef6dfe 4-11,21-86,89-94
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "db2c9bd13449e7afc2a135941284b447c648894c",
+  "prompts": {},
+  "sessions": {
+    "s_963b4ecdc9daa5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ee543-6cb9-7491-b290-09be16556be7",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Brenden Bishop <btbishop93@gmail.com>"
+    }
+  }
+}
