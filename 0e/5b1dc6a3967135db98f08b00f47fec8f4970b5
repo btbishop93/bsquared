@@ -1,0 +1,19 @@
+data/config.json
+  s_3a942472071fa4::t_f5a96ecbf762e2 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "0e5b1dc6a3967135db98f08b00f47fec8f4970b5",
+  "prompts": {},
+  "sessions": {
+    "s_3a942472071fa4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef019-b11c-7fe3-a109-669daa29bb8a",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Brenden Bishop <btbishop93@gmail.com>"
+    }
+  }
+}
