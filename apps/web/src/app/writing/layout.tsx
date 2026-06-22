@@ -1,5 +1,4 @@
 import { Navbar } from "@/components/navbar";
-import { MobileBanner } from "@/components/mobile-banner";
 import { ScrollToTop } from "@/components/scroll-to-top";
 
 export default function WritingLayout({
@@ -10,7 +9,6 @@ export default function WritingLayout({
   return (
     <div className="max-w-3xl md:max-w-4xl mx-auto py-12 sm:py-24 px-6 pb-24">
       <ScrollToTop />
-      <MobileBanner />
       {children}
       <Navbar />
     </div>

@@ -35,11 +35,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.6,
     })),
-    {
-      url: "https://bbish.dev/hardcore",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
   ];
 }

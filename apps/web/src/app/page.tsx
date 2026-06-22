@@ -1,10 +1,5 @@
-import { ModeSelector } from "@/components/mode-selector";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main>
-      <ModeSelector />
-    </main>
-  );
+  redirect("/home");
 }
-
