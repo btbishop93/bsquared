@@ -18,12 +18,22 @@
 \usepackage{ragged2e}
 \usepackage{fontawesome5}
 
-% Use Helvetica Neue
-\setmainfont{Helvetica Neue}[
-  UprightFont = * Light,
-  BoldFont = * Bold,
-  ItalicFont = * Light Italic,
+% Use Inter (vendored under fonts/, SIL OFL) so the PDF builds identically in
+% any environment and matches the website's typeface. Compile from this
+% directory: cd data/resume && xelatex resume.tex
+\setmainfont{Inter}[
+  Path = fonts/,
+  Extension = .ttf,
+  UprightFont = *-Light,
+  BoldFont = *-Bold,
+  ItalicFont = *-LightItalic,
+  BoldItalicFont = *-BoldItalic,
+  % Inter reads larger per point than the previous face; scale down slightly to
+  % match the original visual size and keep the same content on a single page.
+  Scale = 0.95,
 ]
+% Mild line-spacing trim so the same content still lands on one page with Inter.
+\linespread{0.97}
 
 
 % Page setup
@@ -69,7 +79,11 @@
 % Section formatting
 \titleformat{\section}{
   \color{sectioncolor}\bfseries\large
-}{}{0em}{}[\vspace{-8pt}]
+}{}{0em}{}[\vspace{-4pt}]
+% Rebalance section spacing for Inter's taller glyphs: trim the large default
+% gap before each heading to keep one page, while easing the negative gap after
+% it (above) so headings don't collide with the content below.
+\titlespacing*{\section}{0pt}{4pt}{0pt}
 
 % Skill badge commands (different colors per category)
 \newcommand{\langbadge}[1]{%
@@ -178,8 +192,9 @@ Recently, I've been focused on how software gets built with AI, redefining workf
 
 \subroledated{Applied AI \& DevEx Lead, Client Platforms}{2026 – Now}
 \workliststart
-  \item\small Defined division strategy for AI-assisted development across adoption and \textbf{SDLC} transformation; authored guiding principles and a maturity model used for rollout
-  \item\small Built internal tools and agentic systems for code generation, testing, API development, and \textbf{CI/CD}, improving delivery \textbf{speed by 4×}; shipped a multi-agent git worktree orchestration system and published reusable prompts, skills, agents, and the \textbf{AI bootcamp} adopted across the business unit
+  \item\small Built and scaled an autonomous agentic pen-testing harness that validates \textbf{Mythos} SAST findings by safely exploiting them to confirm real risk — now the division's default vulnerability analyzer and scaling firm-wide, cutting findings requiring remediation by \textbf{86\%} across \textbf{2,000+} repos and \textbf{4} platforms
+  \item\small Defined division strategy for AI-assisted development across adoption and \textbf{SDLC} transformation; authored the guiding principles and maturity model, and founded a cross-regional Center of Excellence spanning \textbf{5 regions}
+  \item\small Shipped a multi-agent git worktree orchestration system for parallel agent tasks, published reusable prompts, skills, and agents, and authored the \textbf{AI bootcamp} adopted across the business unit
 \worklistend
 
 \subroledated{Engineering Manager, Client Platforms}{2021 – 2026}
@@ -209,8 +224,7 @@ Recently, I've been focused on how software gets built with AI, redefining workf
 
 \subrole{Co-Founder}
 \workliststart
-  \item\small Led technical strategy for algorithmic crypto trading platform using \textbf{Java}, \textbf{React}, and \textbf{AWS}
-  \item\small Automated arbitrage trading and optimized exchange execution, growing AUM to \textbf{\$750K} in 18 months
+  \item\small Led technical strategy for an algorithmic crypto trading platform (\textbf{Java}, \textbf{React}, \textbf{AWS}), automating arbitrage execution and growing AUM to \textbf{\$750K} in 18 months
 \worklistend
 
 %----------SKILLS (3-column single row)----------

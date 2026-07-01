@@ -11,18 +11,31 @@
           "title": "Applied AI & DevEx Lead, Client Platforms",
           "start": "2026",
           "end": "Now",
-          "description": "Defined and now lead the division strategy for AI-assisted development across two tracks: increasing developer adoption through measurement, training, and enablement, and redesigning the `SDLC` for the building-with-AI era through new squad models, tooling, and process standards. Authored the guiding principles and maturity model now used for division-wide adoption, and founded a cross-regional Center of Excellence spanning `5 regions`.\n\nBuilt internal tools and agentic systems for code generation, testing, API development, and `CI/CD`, including a multi-agent parallel orchestration system using git worktrees. Published reusable prompts, skills, and agents as shared assets, authored the AI bootcamp curriculum adopted across the broader business unit, and surfaced a `42%` telemetry gap before it distorted adoption reporting."
+          "bullets": [
+            "Built and scaled an autonomous agentic pen-testing harness that validates `Mythos` SAST findings by safely exploiting them to confirm real risk — now the division's default vulnerability analyzer and scaling firm-wide, cutting findings requiring remediation by `86%` across `2,000+` repos and `4` platforms",
+            "Defined division strategy for AI-assisted development across adoption and `SDLC` transformation; authored the guiding principles and maturity model, and founded a cross-regional Center of Excellence spanning `5 regions`",
+            "Shipped a multi-agent git worktree orchestration system for parallel agent tasks, published reusable prompts, skills, and agents, and authored the `AI bootcamp` adopted across the business unit"
+          ],
+          "description": "Built and scaled an autonomous agentic pen-testing harness that takes a `Mythos` SAST scan and goes one step further — safely attempting the actual exploit to prove whether a finding is a real risk worth fixing. Took it from POC to `4 platforms` and `2,000+` repos in `6 weeks`; it's now the default vulnerability analyzer across the division and scaling firm-wide, cutting findings requiring active remediation by `86%`. I owned the requirements, output dashboard, pen-test scope, and `Jira` integration, then partnered with platform teams on a platform-agnostic config so it runs against any app.\n\nDefined and now lead the division strategy for AI-assisted development across two tracks: increasing developer adoption through measurement, training, and enablement, and redesigning the `SDLC` for the building-with-AI era through new squad models, tooling, and process standards. Authored the guiding principles and maturity model now used for division-wide adoption, and founded a cross-regional Center of Excellence spanning `5 regions`.\n\nBuilt internal tools and agentic systems for code generation, testing, API development, and `CI/CD`, including a multi-agent parallel orchestration system using git worktrees. Published reusable prompts, skills, and agents as shared assets, authored the AI bootcamp curriculum adopted across the broader business unit, and surfaced a `42%` telemetry gap before it distorted adoption reporting."
         },
         {
           "title": "Engineering Manager, Client Platforms",
           "start": "2021",
           "end": "2026",
+          "bullets": [
+            "Led engineering strategy and delivery for `5` planning apps across Morgan Stanley Online and E*TRADE, managing `12` engineers across `3` global squads",
+            "Influenced a modern rebuild over a legacy-first approach, launching a unified platform that merged two experiences and saved `$2M+`"
+          ],
           "description": "Led engineering strategy and delivery for `5` client-facing planning apps across `Morgan Stanley Online` and `E*TRADE`, managing `12 engineers` across `3 global squads`.\n\nInfluenced stakeholders to back a modern rebuild over a legacy-first approach, launching a unified platform that merged two experiences, reduced UX complexity, improved scalability, and saved `$2M+ annually`."
         },
         {
           "title": "Business Analyst -> UI Developer -> UI Development Lead",
           "start": "2015",
           "end": "2021",
+          "bullets": [
+            "Led UI development for two zero-to-one financial planning applications in `Angular`, partnering with product and backend teams",
+            "Created technical and functional requirements, workflows, and dependency plans while mentoring junior engineers and raising frontend standards"
+          ],
           "description": "Progressed from Technical Business Analyst to Front-End Engineer to UI Development Lead. Led UI development for two zero-to-one financial planning applications in `Angular`, partnering closely with product and backend teams to ship and scale them.\n\nCreated technical and functional requirements, workflows, and dependency plans, while mentoring junior engineers and helping establish frontend best practices."
         }
       ],
@@ -43,6 +56,11 @@
       "logoUrl": "/logos/forwheel.jpg",
       "start": "2021",
       "end": "Now",
+      "bullets": [
+        "Founded and built a production B2B platform from 0->1, owning product vision, architecture, and full-stack implementation",
+        "Built AI advisor 'Garnish' with `OpenAI` and `RAG`, and launched on `iOS` and `Android` using `Flutter`, `Firebase`, and `GCP`",
+        "Secured contracts with `3` key industry vendors for discounted goods and services"
+      ],
       "description": "Founded mobile app helping food truck owners save time and money. Built and shipped end-to-end mobile and backend systems using `Flutter and Firebase`. Developed Garnish, our AI food truck advisor using `OpenAI` for menu pricing, permits, and operations guidance. Secured partner discounts with Square, Food Service Direct, and FLIP Insurance. Serving `150+` food trucks nationwide.",
       "links": [
         {
@@ -65,6 +83,9 @@
       "logoUrl": "/logos/rbitrage.png",
       "start": "2017",
       "end": "2019",
+      "bullets": [
+        "Led technical strategy for an algorithmic crypto trading platform (`Java`, `React`, `AWS`), automating arbitrage execution and growing AUM to `$750K` in 18 months"
+      ],
       "description": "Designed and built algorithmic trading systems using `Java`, `React`, and `AWS`, growing AUM to `$750K` in `18 months`. We exited in 2019.",
       "links": []
     }
