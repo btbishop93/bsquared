@@ -67,10 +67,26 @@ export function ResumeCard({
       ),
   );
 
-  const handleClick = () => {
-    if (hasExpandableContent) {
-      setIsExpanded(!isExpanded);
+  const hasSelectedText = () => {
+    if (typeof window === "undefined") {
+      return false;
     }
+
+    return Boolean(window.getSelection()?.toString().trim());
+  };
+
+  const toggleExpanded = () => {
+    if (hasExpandableContent) {
+      setIsExpanded((current) => !current);
+    }
+  };
+
+  const handleClick = () => {
+    if (!hasExpandableContent || hasSelectedText()) {
+      return;
+    }
+
+    toggleExpanded();
   };
 
   const cardContent = (
@@ -128,6 +144,7 @@ export function ResumeCard({
               ease: [0.16, 1, 0.3, 1],
             }}
             className="mt-4 overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
           >
             {links && links.length > 0 && (
               <div className="mb-4 flex flex-row flex-wrap items-start gap-2 not-prose">
@@ -201,7 +218,8 @@ export function ResumeCard({
         tabIndex={0}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
-            handleClick();
+            e.preventDefault();
+            toggleExpanded();
           }
         }}
       >
