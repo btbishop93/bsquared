@@ -1,0 +1,19 @@
+apps/web/src/components/resume-card.tsx
+  s_52f66de8ab2d31::t_91d40557820144 70-78,80,84-91,147,221-222
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "2c58866db48ba82970393e74f4c2512a1f0e8a5e",
+  "prompts": {},
+  "sessions": {
+    "s_52f66de8ab2d31": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f20da-bef6-79e1-9fd1-f8f324487c95",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Brenden Bishop <btbishop93@gmail.com>"
+    }
+  }
+}
