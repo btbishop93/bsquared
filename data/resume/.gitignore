@@ -1,6 +1,6 @@
 # LaTeX build artifacts. The served resume PDF is committed at
 # apps/web/public/resume.pdf; recompile with:
-#   cd data/resume && xelatex resume.tex && cp resume.pdf ../../apps/web/public/resume.pdf
+#   cd data/resume && tectonic resume.tex && cp resume.pdf ../../apps/web/public/resume.pdf
 *.pdf
 *.aux
 *.log

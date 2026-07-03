@@ -8,6 +8,7 @@
     "dev:web": "bun --cwd apps/web dev",
     "build": "bun --filter '*' run build",
     "resume:check": "bun run scripts/check-resume-sync.ts",
+    "resume:build": "cd data/resume && tectonic resume.tex && cp resume.pdf ../../apps/web/public/resume.pdf",
     "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules"
   },
   "devDependencies": {
